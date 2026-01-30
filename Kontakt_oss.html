@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Egenhaand - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Contact information for Egenhaand — who we are and what we do.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+      <nav id="topMenu" class="topMenu">
+      <a class="logo" href="Hjem.html">Moenster/<span class ="solution">Solutions</span></a>
+      <ul class="menu-list">
+        <li><a href="Om_oss.html">Om oss</a></li>
+        <li><a href="Tjenester.html">Tjenester</a></li>
+        <li><a href="Kontakt_oss.html" class="active">Kontakt oss</a></li>
+      </ul>
+    </nav>
+
+    <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "2086b42f-4090-40f9-ae50-71c3d8a94697",
+        apiHost: "https://cloud.flowiseai.com",
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#0B0B26',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 1,
+                    autoOpenOnMobile: false
+                }
+            },
+
+
+            tooltip: {
+                showTooltip: false,
+                tooltipMessage: 'Hei der, prøv chatboten her!',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            
+            customCSS: ``,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'KI Assistent',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hei! Hvordan kan vi hjelpe deg i dag?',
+                errorMessage: 'This is a custom error message',
+                backgroundColor: '#ffffff',
+                backgroundImage: 'enter image path or link',
+                height: 500,
+                width: 400,
+                fontSize: 16,
+               
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                },
+                userMessage: {
+                    backgroundColor: '#333333',
+                    textColor: '#ffffff',
+                    showAvatar: false,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 100,
+                    maxCharsWarningMessage: 'Hold teksten under 100 tegn',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+                feedback: {
+                    color: '#303235'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+
+                 footer: {
+                    textColor: '#303235',
+                    text: '',
+                    company: '',
+                    companyLink: ''
+                }
+                
+            }
+        }
+    })
+</script>
+
+<flowise-fullchatbot></flowise-fullchatbot>
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.initFull({
+        chatflowid: "2086b42f-4090-40f9-ae50-71c3d8a94697",
+        apiHost: "https://cloud.flowiseai.com",
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#3B81F6',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Hi There 👋!',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            disclaimer: {
+                title: 'Disclaimer',
+                message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+                textColor: 'black',
+                buttonColor: '#3b82f6',
+                buttonText: 'Start Chatting',
+                buttonTextColor: 'white',
+                blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backgroundColor: 'white'
+            },
+            customCSS: ``,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'Flowise Bot',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hello! This is custom welcome message',
+                errorMessage: 'This is a custom error message',
+                backgroundColor: '#ffffff',
+                backgroundImage: 'enter image path or link',
+                height: '100%',
+                width: '100%',
+                fontSize: 16,
+                starterPrompts: [
+                    "What is a bot?",
+                    "Who are you?"
+                ],
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                },
+                userMessage: {
+                    backgroundColor: '#3B81F6',
+                    textColor: '#ffffff',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+                feedback: {
+                    color: '#303235'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'Flowise',
+                    companyLink: 'https://flowiseai.com'
+                }
+            }
+        }
+    })
+</script>
+
+       
+      <nav id="bottomMenu" class="bottomMenu">
+      <div class="bottom-menu-inner container">
+        <ul class="menu-list">
+          <li><a href = "Hjem.html">Home</a></li>
+          <li><a href = "Om_oss.html">About</a></li>
+          <li><a href = "Tjenester.html">Services</a></li>
+          <li><a href = "Kontakt_oss.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="bottom-menu-lower container">
+        <div class="bottom-right">
+          <div class="media-list">
+            <a href="#" aria-label="Egenhaand on Facebook"><img src="https://images.icon-icons.com/1043/PNG/512/social_media_icons_flat_shadow_set_512x512_0000_facebook_icon-icons.com_76449.png" alt="Facebook icon" /></a>
+            <a href="#" aria-label="Egenhaand on Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Twitter icon" /></a>
+          </div>
+          <div class="bottom-copy">
+            <p>© 2024 Egenhaand solutions. All rights reserved.</p>
+            <p><a href="#">Our terms of service</a></p>
+          </div>
+        </div>
+      </div>
+    </nav>  
+  
+  </body>
+</html>

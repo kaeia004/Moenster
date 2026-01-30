@@ -1,0 +1,594 @@
+.solution{
+    color: #bc9842
+}
+
+body{
+    margin:0;
+    font-family: 'Google Sans', sans-serif;
+    font-weight:400;
+    font-size: 1.25rem;
+       
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0.66em;
+}
+.centered{
+    text-align: center;
+}
+
+.white{
+    color: #d5d3d3
+}
+
+.hero1{
+    padding:48px 16px;
+    text-align:center;
+    background:#f8fbff; /* change to color or image if desired */
+}
+.hero1 h1{
+    font-size:clamp(28px,4vw,48px);
+    margin:0 0 12px;
+}
+.hero1 .lead{
+    color:#556;
+    max-width:1500px;
+    margin:0 auto;
+    font-size:1.05rem;
+}
+
+a.active {
+    background-color: rgb(83, 112, 149, 0.6);
+}
+
+/* Top horizontal centered menu */
+#topMenu.topMenu{
+    position: sticky; /* stays at top when scrolling */
+    top: 0;
+    z-index: 999;
+    background: #d9f3ff;
+    border-bottom: 1px solid #e9e9e9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:64px;
+    padding:0 12px;
+}
+
+#topMenu .menu-header{ display:none; }
+
+#topMenu .menu-list{
+    display:flex;
+    gap:28px;
+    list-style:none;
+    margin:0 0 0 auto; /*align right*/
+    padding:0 64px; /* add horizontal padding so centering accounts for brand */
+
+}
+
+#topMenu .menu-list li{ margin:0; }
+
+#topMenu .menu-list a{
+    display:inline-block;
+    color:#333333;
+    text-decoration:none;
+    padding:8px 10px;
+    border-radius:6px;
+    font-weight:500;
+}
+
+#topMenu .menu-list a:hover,
+#topMenu .menu-list a:focus{
+    background: rgba(83, 112, 149, 0.6);
+    outline: none;
+}
+
+/* Ensure page content isn't covered by the sticky top menu */
+.page-content{ padding:24px; padding-top:84px; }
+
+/* Small screens: allow horizontal scroll if items don't fit */
+@media (max-width:520px){
+    #topMenu{ padding-left:8px; padding-right:8px; }
+    #topMenu .menu-list{ gap:14px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+}
+
+/* brand on the left */
+/* Brand / logo on the left */
+#topMenu .logo{
+        position:absolute;
+        left:20px;
+        top:50%;
+        transform:translateY(-50%); /* vertically center inside the top bar */
+        display:inline-block;
+        padding:4px 6px;
+        color:#111;
+        text-decoration:none;
+
+        /* Use the DM Serif Text font loaded in the page */
+        font-family: 'DM Serif Text', serif;
+        font-weight:400;
+        font-size: clamp(20px, 3.5vw, 36px); /* responsive size */
+        line-height:1;
+        letter-spacing:0.2px;
+}
+
+#topMenu .logo,
+#topMenu .logo:link,
+#topMenu .logo:visited,
+#topMenu .logo.active {
+    /* keep the logo at the original (regular) weight on all pages/states */
+    font-weight:400;
+}
+
+/* Contact block: green box that sits directly under the top menu */
+#contactMenu.contactMenu{
+    position: relative;
+    z-index: 998;
+    background: #0B0B26; /* dark background for contrast with white text */
+    border-bottom: 1px solid #cfead1;
+    padding:40px 0;
+    min-height: 500px; /* reasonable default height */
+    color: #d5d3d3; /* make contact text white */
+}
+
+.contact-menu-inner{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 16px;
+}
+.contact-menu-inner .fm-text{ flex:1; }
+.contact-menu-inner .fm-image{ flex:0 0 420px; }
+.contact-menu-inner .fm-image img{ width:100%; height:auto; display:block; border-radius:12px; }
+.contact-menu-inner .sm-image{ flex:0 0 420px; order:-1; display:flex; align-self:stretch; flex-shrink:0; margin-right:24px; overflow:hidden; }
+.contact-menu-inner .sm-image img{ width:auto; height:100%; display:block; object-fit:cover; border-radius:12px; }
+.contact-menu-inner .sm-text{ min-width:0; }
+
+/* Form controls inside the contact block should remain readable */
+#contactMenu.contactMenu .form-control{
+    background: #d5d3d3; /* keep inputs white */
+    color: #111;       /* dark input text */
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+
+@media (max-width:720px){
+    .contact-menu-inner{ flex-direction:column; text-align:center; }
+    .contact-menu-inner .fm-image{ width:80%; max-width:420px; }
+    .contact-menu-inner .sm-image{ width:80%; max-width:420px; float:none; }
+}
+
+/* First menu: content block under the top menu */
+#firstMenu.firstMenu{
+    position: relative;
+    z-index: 998;
+    background: #f8fbff; /* light background for contrast */
+    padding:50px 0;
+    min-height:500px;
+}
+
+
+.first-menu-inner{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start; /* align content to the left (start) */
+    gap:24px;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 16px;
+}
+
+/* ensure text inside the left text column is left-aligned on desktop; mobile keeps centered via media query */
+.first-menu-inner .fm-text{ text-align:left; }
+
+.first-menu-inner .fm-text{ flex:1; }
+.first-menu-inner .fm-image{ flex:0 0 720px; }
+.first-menu-inner .fm-image img{ width:100%; height:auto; display:block; border-radius:18px; }
+.first-menu-inner .sm-image{ flex:0 0 720px; order:-1; display:flex; align-self:stretch; flex-shrink:0; margin-right:24px; overflow:hidden; }
+.first-menu-inner .sm-image img{ width:auto; height:100%; display:block; object-fit:cover; border-radius:18px; }
+.first-menu-inner .sm-text{ min-width:0; }
+
+
+
+.first-menu-button{
+    display:inline-block;        /* size to content */
+    margin-top:18px;             /* keep vertical spacing */
+    padding:10px 16px;           /* comfortable tap target */
+    background:#537095;          /* same color as contact button */
+    color:#fff;                  /* readable on the background */
+    border-radius:6px;
+    text-decoration:none;        /* for anchors */
+    font-weight:600;
+    transition: background-color .18s ease, transform .08s ease;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); /* center visually without stretching */
+    white-space:nowrap;          /* avoid wrapping that could make it longer */
+}
+.first-menu-button:hover,
+.first-menu-button:focus{
+    background:#3f5a74;
+    
+}
+@media (max-width:520px){
+    .first-menu-inner{ flex-direction:column; text-align:center; }
+    .first-menu-inner .fm-image{ width:80%; max-width:420px; }
+    .first-menu-inner .sm-image{ width:80%; max-width:420px; float:none; }
+    .first-menu-button{ margin-left:auto; margin-right:auto; }
+}
+
+#secondMenu.secondMenu{
+    position: relative;
+    z-index: 998;
+    background: #f8fbff; /* keep page background white and place a centered box */
+    padding:40px 0;
+    min-height:160px; 
+}
+
+
+.second-menu-inner{
+    display:flex;
+    align-items:flex-start; /* align children to the top */
+    gap:24px;
+    max-width:1070px;          /* wider card */
+    margin:0 auto;
+    padding:24px;             /* inner padding for the card */
+    background:#0B0B26;         /* white rounded card */
+    border-radius:20px;
+    box-shadow:0 14px 24px rgba(8,24,40,0.06);
+    min-height: 500px; /* reasonable default height */
+}
+
+.second-menu-inner .sm-text,
+.second-menu-inner .fm-text{ align-self:flex-start; }
+
+.second-menu-inner .sm-text,
+.second-menu-inner .fm-text{ flex:1; color:#111; }
+.second-menu-inner .sm-text{ flex:1; color:#111; }
+.second-menu-inner .fm-image{ flex:0 0 360px; }
+.second-menu-inner .fm-image img{ width:100%; height:auto; display:block; border-radius:12px; }
+.second-menu-inner .sm-image{ flex:0 0 360px; order:-1; display:flex; align-self:stretch; flex-shrink:0; margin-right:24px; overflow:hidden; }
+.second-menu-inner .sm-image img{ width:auto; height:100%; display:block; object-fit:cover; border-radius:12px; }
+.second-menu-inner .sm-text{ min-width:0; }
+
+@media (max-width:720px){
+    .second-menu-inner{ flex-direction:column; padding:20px; margin:0 16px; }
+    .second-menu-inner .fm-image{ width:80%; max-width:420px; }
+    .second-menu-inner .sm-image{ width:80%; max-width:420px; float:none; }
+}
+
+#thirdMenu.thirdMenu{
+    position: relative;
+    z-index: 998;
+    background: #f8fbff; /* keep page background white and place a centered box */
+    border-bottom: 1px solid #e9e9e9;
+    padding:40px 0;
+    min-height:160px;
+}
+
+
+.third-menu-inner{
+    gap:24px;
+    max-width:1070px;          /* wider card */
+    margin:0 auto;
+    padding:24px;             /* inner padding for the card */
+    background:#fff6d7;         /* white rounded card */
+    border-radius:20px;
+    box-shadow:0 14px 24px rgba(8,24,40,0.06);
+    min-height: 500px; /* reasonable default height */
+    font-size: larger;
+}
+
+.third-menu-inner .sm-text,
+.third-menu-inner .fm-text{ align-self:flex-start; }
+
+.third-menu.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.third-menu-inner .sm-text,
+.third-menu-inner .fm-text{ flex:1; color:#111; }
+.third-menu-inner .sm-text{ flex:1; color:#111; }
+.third-menu-inner .fm-image{ flex:0 0 360px; }
+.third-menu-inner .fm-image img{ width:100%; height:auto; display:block; border-radius:12px; }
+.third-menu-inner .sm-image{ flex:0 0 360px; order:-1; display:flex; align-self:stretch; flex-shrink:0; margin-right:24px; overflow:hidden; }
+.third-menu-inner .sm-image img{ width:auto; height:100%; display:block; object-fit:cover; border-radius:12px; }
+.third-menu-inner .sm-text{ min-width:0; }
+
+@media (max-width:720px){
+    .third-menu-inner{ flex-direction:column; padding:20px; margin:0 16px; }
+    .third-menu-inner .fm-image{ width:80%; max-width:420px; }
+    .third-menu-inner .sm-image{ width:80%; max-width:420px; float:none; }
+}
+
+/* Center headings and content vertically and horizontally in second and third menus */
+.second-menu-inner .sm-text,
+.third-menu-inner .tm-text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;    /* center horizontally */
+    justify-content:center; /* center vertically */
+    text-align:center;
+    height:100%;
+    gap:12px;
+}
+
+.second-menu-inner .sm-text h2,
+.third-menu-inner .tm-text h2{
+    margin:0 0 8px 0;
+}
+
+/* Ensure paragraphs center and wrap nicely */
+.second-menu-inner .sm-text p,
+.third-menu-inner .tm-text p{
+    margin:0;
+    max-width:680px;
+}
+
+/* Place the contact button under the text in third menu */
+.third-menu-inner .tm-text .first-menu-button{
+    display:inline-block;
+    margin-top:16px;
+}
+
+@media (max-width:720px){
+    /* Keep content centered on small screens and use normal flow */
+    .second-menu-inner .sm-text,
+    .third-menu-inner .tm-text{
+        align-items:center;
+        justify-content:center;
+        padding:12px 8px;
+        height:auto;
+    }
+    .second-menu-inner .sm-text p,
+    .third-menu-inner .tm-text p{
+        text-align:center;
+    }
+}
+
+#aboutMenu.aboutMenu{
+    position: relative;
+    z-index: 998;
+    background: #f8fbff; /* light background for contrast */
+    padding:20px 0;
+    min-height:500px;
+}
+
+.about-menu-inner{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    max-width:1300px;
+    margin:0 auto;
+    padding:0 16px;
+}
+/* Three equal columns inside About */
+.about-columns{
+    display:flex;
+    gap:24px;
+    width:100%;
+    justify-content:center;
+    align-items:stretch;
+}
+
+.about-column{
+    flex:1 1 0%;
+    min-width:0; /* prevents overflow */
+    padding:24px;
+    box-sizing:border-box;
+    background: rgba(255,255,255,0.04); /* subtle card look */
+    border-radius:10px;
+    text-align:left;
+}
+
+/* Hero image with centered white overlay text */
+.about-hero{
+    max-width:1500px;
+    margin:0 auto 24px;
+    padding:0 16px;
+}
+.about-hero .hero-img{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    /* fill viewport but leave a bit of vertical space so it doesn't dominate the page */
+    height: calc(100vh - 120px);
+    max-height: 820px; /* prevent excessively tall hero on very large screens */
+}
+.about-hero .hero-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover; /* crop image to fill the container */
+    display:block;
+}
+.about-hero .hero-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+}
+.about-hero .hero-overlay h1,
+.about-hero .hero-overlay p{
+    color:#fff;
+    margin:0;
+}
+.about-hero .hero-overlay .lead{ color:#f5f5f5; opacity:0.95; margin-top:8px; }
+
+@media (max-width:720px){
+    .about-columns{ flex-direction:column; gap:16px; align-items:center; }
+    .about-column{ width:100%; max-width:720px; }
+    .about-menu-inner{ padding:20px; }
+    .about-hero .hero-overlay{ padding:24px 12px; }
+    .about-hero .hero-overlay h1{ font-size: clamp(20px,4vw,32px); }
+}
+
+#serviceMenu.serviceMenu{
+    position: relative;
+    z-index: 998;
+    background: #fff6d7; /* light background for contrast */
+    border-bottom: 1px solid #e9e9e9;
+    padding:50px 0;
+    min-height:500px;
+}
+
+.service-menu-inner-logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 16px;
+    text-align:center;
+}
+/* Three equal columns inside Services */
+.service-columns{
+    display:flex;
+    gap:24px;
+    width:100%;
+    justify-content:center;
+    align-items:stretch;
+}
+
+.service-column{
+    flex:1 1 0%;
+    min-width:0; /* prevents overflow */
+    padding:24px;
+    box-sizing:border-box;
+    background: rgba(255,255,255,0.04); /* subtle card look */
+    border-radius:10px;
+    text-align:left;
+}
+
+@media (max-width:720px){
+    .service-columns{ flex-direction:column; gap:16px; align-items:center; }
+    .service-column{ width:100%; max-width:720px; }
+    .service-menu-inner{ padding:20px; }
+}
+
+
+#bottomMenu.bottomMenu{
+    position: relative;
+    z-index: 998;
+    background: #0B0B26; /* light background for contrast */
+    border-top: 1px solid #e9e9e9;
+    padding:30px 0;
+    min-height:350px;
+    color: #ffffff; /* default text color for bottom menu */
+}
+
+#bottomMenu .menu-list{
+    gap:28px;
+    list-style:none;
+    margin:0;
+    padding:0 0px; /* add horizontal padding so centering accounts for brand */
+    align-items:center;
+    justify-content:center;
+}
+/* Explicitly remove text decoration for all link states inside bottom menu */
+#bottomMenu.bottomMenu a:hover,
+#bottomMenu.bottomMenu a:focus{
+    color: #d7d7d7;
+    text-decoration: underline;
+}
+
+#bottomMenu .menu-list li{ margin:0; }
+
+#bottomMenu .menu-list a{
+    display:inline-block;
+    color:#d5d3d3;
+    text-decoration:none;
+    padding:8px 10px;
+    border-radius:6px;
+    font-weight:500;
+}
+
+#bottomMenu .menu-list::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 8px;
+  background: #e9e9e9;
+}
+
+/* Lower row under divider — align media list and copyright to the right */
+.bottom-menu-lower{
+    max-width:1100px;
+    margin:8px auto 0;
+    padding:0 16px;
+}
+.bottom-right{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    justify-content:space-between; /* media left, copy right */
+    width:100%;
+}
+
+/* media list styling inside the lower row */
+#bottomMenu .media-list{
+    display:flex;
+    gap:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    align-items:center;
+}
+#bottomMenu .media-list a{
+    display:inline-block;
+    color:#d5d3d3;
+    text-decoration:none;
+    padding:4px;
+    border-radius:6px;
+}
+#bottomMenu .media-list a img{
+    width:24px;
+    height:24px;
+    display:block;
+}
+#bottomMenu .media-list a:hover,
+#bottomMenu .media-list a:focus{
+    color: #d7d7d7;
+    text-decoration: none;
+}
+.bottom-copy a
+.bottom-copy p{
+    margin:0;
+    color:#d5d3d3;
+    font-size:0.95rem;
+}
+
+/* Terms link styling: match bottom menu color and remove underline */
+#bottomMenu .bottom-copy a{
+    color: #d5d3d3;
+    text-decoration: none;
+}
+#bottomMenu .bottom-copy a:hover,
+#bottomMenu .bottom-copy a:focus{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* responsive: stack on small screens */
+@media (max-width:520px){
+    .bottom-right{ flex-direction:column; align-items:center; gap:8px; }
+    .bottom-copy{ text-align:center; }
+}
+
+
+/* Small screens: allow horizontal scroll if items don't fit */
+@media (max-width:520px){
+    #bottomMenu{ padding-left:8px; padding-right:8px; }
+    #bottomMenu .menu-list{ gap:14px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+}
+
