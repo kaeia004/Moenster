@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Egenhaand - Contact</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
     <meta name="description" content="Contact information for Egenhaand — who we are and what we do.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -16,111 +17,13 @@
       <a class="logo" href="Hjem.html">Moenster/<span class ="solution">Solutions</span></a>
       <ul class="menu-list">
         <li><a href="Om_oss.html">Om oss</a></li>
-        <li><a href="Tjenester.html">Tjenester</a></li>
         <li><a href="Kontakt_oss.html" class="active">Kontakt oss</a></li>
       </ul>
     </nav>
 
-    <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "2086b42f-4090-40f9-ae50-71c3d8a94697",
-        apiHost: "https://cloud.flowiseai.com",
-        chatflowConfig: {
-            /* Chatflow Config */
-        },
-        observersConfig: {
-            /* Observers Config */
-        },
-        theme: {
-            button: {
-                backgroundColor: '#0B0B26',
-                right: 20,
-                bottom: 20,
-                size: 48,
-                dragAndDrop: true,
-                iconColor: 'white',
-                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-                autoWindowOpen: {
-                    autoOpen: true,
-                    openDelay: 1,
-                    autoOpenOnMobile: false
-                }
-            },
 
-
-            tooltip: {
-                showTooltip: false,
-                tooltipMessage: 'Hei der, prøv chatboten her!',
-                tooltipBackgroundColor: 'black',
-                tooltipTextColor: 'white',
-                tooltipFontSize: 16
-            },
-            
-            customCSS: ``,
-            chatWindow: {
-                showTitle: true,
-                showAgentMessages: true,
-                title: 'KI Assistent',
-                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-                welcomeMessage: 'Hei! Hvordan kan vi hjelpe deg i dag?',
-                errorMessage: 'This is a custom error message',
-                backgroundColor: '#ffffff',
-                backgroundImage: 'enter image path or link',
-                height: 500,
-                width: 400,
-                fontSize: 16,
-               
-                starterPromptFontSize: 15,
-                clearChatOnReload: false,
-                sourceDocsTitle: 'Sources:',
-                renderHTML: true,
-                botMessage: {
-                    backgroundColor: '#f7f8ff',
-                    textColor: '#303235',
-                    showAvatar: true,
-                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
-                },
-                userMessage: {
-                    backgroundColor: '#333333',
-                    textColor: '#ffffff',
-                    showAvatar: false,
-                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
-                },
-                textInput: {
-                    placeholder: 'Type your question',
-                    backgroundColor: '#ffffff',
-                    textColor: '#303235',
-                    sendButtonColor: '#3B81F6',
-                    maxChars: 100,
-                    maxCharsWarningMessage: 'Hold teksten under 100 tegn',
-                    autoFocus: true,
-                    sendMessageSound: true,
-                    sendSoundLocation: 'send_message.mp3',
-                    receiveMessageSound: true,
-                    receiveSoundLocation: 'receive_message.mp3'
-                },
-                feedback: {
-                    color: '#303235'
-                },
-                dateTimeToggle: {
-                    date: true,
-                    time: true
-                },
-
-                 footer: {
-                    textColor: '#303235',
-                    text: '',
-                    company: '',
-                    companyLink: ''
-                }
-                
-            }
-        }
-    })
-</script>
-
-<flowise-fullchatbot></flowise-fullchatbot>
+    
+    <flowise-fullchatbot></flowise-fullchatbot>
 <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.initFull({
@@ -140,7 +43,7 @@
                 size: 48,
                 dragAndDrop: true,
                 iconColor: 'white',
-                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                customIconSrc: 'https://cdn-icons-png.flaticon.com/512/10479/10479785.png',
                 autoWindowOpen: {
                     autoOpen: true,
                     openDelay: 2,
@@ -154,16 +57,7 @@
                 tooltipTextColor: 'white',
                 tooltipFontSize: 16
             },
-            disclaimer: {
-                title: 'Disclaimer',
-                message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
-                textColor: 'black',
-                buttonColor: '#3b82f6',
-                buttonText: 'Start Chatting',
-                buttonTextColor: 'white',
-                blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
-                backgroundColor: 'white'
-            },
+            
             customCSS: ``,
             chatWindow: {
                 showTitle: true,
@@ -178,8 +72,8 @@
                 width: '100%',
                 fontSize: 16,
                 starterPrompts: [
-                    "What is a bot?",
-                    "Who are you?"
+                    "Jeg ønsker et tilbud for min bedrift",
+                    "Hvordan kan AI forbedre kundeservicen vår?",
                 ],
                 starterPromptFontSize: 15,
                 clearChatOnReload: false,
@@ -189,7 +83,7 @@
                     backgroundColor: '#f7f8ff',
                     textColor: '#303235',
                     showAvatar: true,
-                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                    avatarSrc: 'https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/robot.svg'
                 },
                 userMessage: {
                     backgroundColor: '#3B81F6',
@@ -202,7 +96,7 @@
                     backgroundColor: '#ffffff',
                     textColor: '#303235',
                     sendButtonColor: '#3B81F6',
-                    maxChars: 50,
+                    maxChars: 100,
                     maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
                     autoFocus: true,
                     sendMessageSound: true,
@@ -219,23 +113,25 @@
                 },
                 footer: {
                     textColor: '#303235',
-                    text: 'Powered by',
-                    company: 'Flowise',
-                    companyLink: 'https://flowiseai.com'
+                    text: '',
+                    company: '',
+                    companyLink: ''
                 }
             }
         }
     })
 </script>
 
-       
+      
+
+
+
       <nav id="bottomMenu" class="bottomMenu">
       <div class="bottom-menu-inner container">
         <ul class="menu-list">
-          <li><a href = "Hjem.html">Home</a></li>
-          <li><a href = "Om_oss.html">About</a></li>
-          <li><a href = "Tjenester.html">Services</a></li>
-          <li><a href = "Kontakt_oss.html">Contact</a></li>
+          <li><a href = "Hjem.html">Hjem</a></li>
+          <li><a href = "Om_oss.html">Om oss</a></li>
+          <li><a href = "Kontakt_oss.html">Kontakt oss</a></li>
         </ul>
       </div>
 
