@@ -209,9 +209,9 @@ a.active {
 .second-menu-inner .sm-text,
 .second-menu-inner .fm-text{ flex:1; color:#111; }
 .second-menu-inner .sm-text{ flex:1; color:#111; }
-.second-menu-inner .fm-image{ flex:0 0 360px; }
+.second-menu-inner .fm-image{ flex:0 0 670px; }
 .second-menu-inner .fm-image img{ width:100%; height:auto; display:block; border-radius:12px; }
-.second-menu-inner .sm-image{ flex:0 0 360px; order:-1; display:flex; align-self:stretch; flex-shrink:0; margin-right:24px; overflow:hidden; }
+.second-menu-inner .sm-image{ flex:0 0 670px; order:-1; display:flex; align-self:stretch; flex-shrink:0; margin-right:24px; overflow:hidden; }
 .second-menu-inner .sm-image img{ width:auto; height:100%; display:block; object-fit:cover; border-radius:12px; }
 .second-menu-inner .sm-text{ min-width:0; }
 
